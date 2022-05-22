@@ -13,27 +13,6 @@ function Login() {
   };
   const register = (e) => {
     e.preventDefault();
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        console.log(user);
-        if (auth) {
-          sendEmailVerification(auth.currentUser).then(() => {
-            // Email verification sent!
-            router.push("/");
-            // ...
-          });
-          router.push("/");
-        }
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        alert(errorMessage);
-        // ..
-      });
   };
 
   return (
