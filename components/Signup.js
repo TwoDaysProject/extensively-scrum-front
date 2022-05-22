@@ -41,39 +41,6 @@ function Signup() {
   };
   const register = (e) => {
     e.preventDefault();
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        console.log(user);
-        if (auth) {
-          const save = async () => {
-            const response = await axios({
-              method: "post",
-              headers: { "Access-Control-Allow-Origin": "*" },
-              url: "https://jeeback.herokuapp.com/api/custumer",
-              data: {
-                id: user.uid,
-                fullname: fullname,
-                email: email,
-                adresse: adresse,
-                type: type,
-              },
-            });
-            router.push("/");
-          };
-          save().catch((error) => {
-            console.log("");
-          });
-        }
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        alert(errorMessage);
-        // ..
-      });
   };
 
   return (
