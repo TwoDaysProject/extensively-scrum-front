@@ -9,6 +9,7 @@ import {
   UserIcon,
   ShoppingCartIcon,
   ShoppingBagIcon,
+  PlusIcon,
 } from "@heroicons/react/outline";
 import Image from "next/image";
 import HeaderItem from "./HeaderItem";
@@ -41,14 +42,15 @@ function Header() {
           Icon={UserIcon}
           Function={handleAuth}
         />
+        <HeaderItem
+          className="pt-1"
+          title={"Add"}
+          Icon={PlusIcon}
+          Function={() => {
+            router.push("/add");
+          }}
+        />
       </div>
-
-      <Image
-        className="object-contain"
-        src="https://i.ibb.co/FzBsVJh/AGRI-1.png"
-        width={200}
-        height={100}
-      />
     </header>
   );
 }
