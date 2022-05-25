@@ -1,0 +1,18 @@
+.addProjectContainer {
+    position: relative;
+}
+
+.submitButton {
+    width: 50%;
+    position: absolute;
+    right: 25%;
+    top: 73%;
+    color: white;
+    background-color: #00204A !important;
+}
+
+.submitButton:hover {
+    color: #00204A;
+    background-color: white !important;
+    border: #00204A solid 1px;
+}

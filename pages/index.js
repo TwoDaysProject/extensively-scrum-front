@@ -5,12 +5,10 @@ import { useRouter } from "next/router";
 
 export default function Home({ results }) {
   const router = useRouter();
-  return (
-    <div>
+  return (<div>
       <Head>
-        <title>extensivly</title>
-        <meta name="description" content="extensivly" />
+            <title>extensivly</title>
+            <meta name="description" content="extensivly" />
       </Head>
-    </div>
-  );
+    </div>);
 }
