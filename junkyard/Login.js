@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { useStateValues } from "./StateProvider";
+import { getProviders } from "next-auth/react";
 
 import { useRouter } from "next/router";
 
-function Login() {
+function Login({ providers }) {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -65,3 +65,12 @@ function Login() {
 }
 
 export default Login;
+export async function getServerSideProps() {
+  const providers = await getProviders();
+
+  return {
+    props: {
+      providers,
+    },
+  };
+}
