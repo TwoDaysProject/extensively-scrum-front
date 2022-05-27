@@ -1,9 +1,10 @@
 
 import Head from "next/head";
-import Header from "../components/Header";
-import Nav from "../components/Nav";
+import Navbar from "../components/navbar/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useRouter } from "next/router";
+import LeftNavBar from "../components/projects/LeftNavBar";
+import Content from "../components/projects/Content";
 export default function Home({ results }) {
   const router = useRouter();
 
@@ -14,9 +15,9 @@ export default function Home({ results }) {
         <meta name="description" content="extensivly" />
         <link rel="icon" href="/AGRI (1).ico" />
       </Head>
-
-      <Header />
-      <Nav count={5} />
+      <Navbar />
+      <LeftNavBar />
+      <Content />
     </div>
   );
 }

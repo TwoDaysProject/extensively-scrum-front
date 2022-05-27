@@ -2,10 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply bg-[#06202A] text-gray-300;
-  }
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(245,245,245);
+  width: 100%;
+  height: 100%;
 }
 
 .retatedSideImage {
@@ -32,4 +37,55 @@
   height: 100%;
   width: 100%;
   position: absolute;
+}
+
+.navbarHeader{
+  background-color: #00204A;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.nav {
+  display: flex;
+  padding: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__menu-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 35px;
+}
+.nav__link {
+  color: #F3F4F6;
+  font-weight: bold;
+  font-size: 18px; 
+  position: relative;
+  display: flex;
+  column-gap: 15px;
+}
+.nav__link::before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  bottom: -15px;
+  left: 0;
+  height: 5px;
+  background-color: white;
+  transition: all 0.2s;
+}
+.nav__link:hover::before {
+  width: 100%;
+}
+.logotext {
+  color: white;
+  font-family: cursive;
+  font-size: revert;
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 12px;
 }
