@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faHome,
     faUser,
-    faBell,
+    faSignOut
   } from "@fortawesome/free-solid-svg-icons";
 
 const Navitem = ( {href, text, active} ) => {
@@ -23,21 +23,6 @@ const Navitem = ( {href, text, active} ) => {
             </Link>
           );
     }
-    else if ( text == "Notifications") {
-        return (
-            <Link href={href}>
-                <a
-                    className={`
-                        nav__link ${active ? "active" : ""}
-                    `}
-                >
-                        <FontAwesomeIcon icon= {faBell}
-                        style={{ fontSize: 25, color: "white" }}/>      
-                    {text}
-                </a>
-            </Link>
-          );
-    }
     else if ( text == "Profile") {
         return (
             <Link href={href}>
@@ -49,6 +34,21 @@ const Navitem = ( {href, text, active} ) => {
                         <FontAwesomeIcon icon= {faUser}
                         style={{ fontSize: 25, color: "white" }}/>      
                         {text}
+                </a>
+            </Link>
+          );
+    }
+    else if ( text == "Log out") {
+        return (
+            <Link href={href}>
+                <a
+                    className={`
+                        nav__link ${active ? "active" : ""}
+                    `}
+                >
+                        <FontAwesomeIcon icon= {faSignOut}
+                        style={{ fontSize: 25, color: "white" }}/>      
+                    {text}
                 </a>
             </Link>
           );

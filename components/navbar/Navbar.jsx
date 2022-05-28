@@ -10,12 +10,12 @@ const MENU_LIST = [
         href: "/"
     },
     {
-        text: "Notifications",
-        href: "/notifications"
-    },
-    {
         text: "Profile",
         href: "/profile"
+    },
+    {
+        text: "Log out",
+        href: "/"
     }
 ]
 
