@@ -92,3 +92,7 @@
 .projectmembers >li{
     padding: 5px;
 }
+.tableft {
+    display: flex;
+    flex-direction: row;
+}
