@@ -13,14 +13,14 @@ function ProductBacklog() {
     <div className={styles.contentcontainer}>
       <div className={styles.contentheader}>
         <h1 className={styles.contenttitle}> Check all your epics, user stories and bugs in here !</h1>
-        <button className={styles.btn}>
+        <a href='/addpbitem' className={styles.btn}>
             <FontAwesomeIcon title='Add'
 							    icon={faAdd}
 							    style={{ width: "25px", height: "35px", cursor: "pointer" ,
                                     color: "white", padding: "10px", paddingRight: "25px" }}
-			    />
+			      />
             <text> Add Backlog Item  </text>
-        </button>
+        </a>
       </div>  
     
     

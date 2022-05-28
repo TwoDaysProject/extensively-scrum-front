@@ -23,6 +23,7 @@ body {
 }
 
 .bigCenteredCard {
+  margin-top: 45px;
   width: 60em;
   position: relative;
   top: 20%;
@@ -88,4 +89,7 @@ body {
   flex-direction: row;
   align-items: center;
   column-gap: 12px;
+}
+#bigcenteredcardaddpbi {
+  margin-top: 45px;
 }
