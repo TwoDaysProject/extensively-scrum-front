@@ -20,7 +20,7 @@ import styles from '/components/addProject/AddProject.module.css'
 
 const theme = createTheme();
 
-export default function SignIn() {
+export default function SignUp() {
 
     const stylingform = {
         margin: "20px"
@@ -57,20 +57,6 @@ export default function SignIn() {
     </header>  
       <Grid container component="main" sx={{ height: '93vh' }}>
         <CssBaseline />
-        <Grid 
-          item
-          xs={false}
-          sm={4}
-          md={7}
-          sx={{
-            backgroundImage: `url(${bg.src})`,
-            backgroundRepeat: 'no-repeat',
-            backgroundColor: (t) =>
-              t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        > </Grid>
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square
             sx = {{
                 width: "50%",
@@ -94,9 +80,20 @@ export default function SignIn() {
                 fontWeight: "bolder", 
                 fontSize: "3.5rem",
                 letterSpacing: "0.1em" }} >
-              Sign in
+              Sign up
             </Typography>
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+              <TextField
+                style= {stylingform}
+                margin="normal"
+                required
+                fullWidth
+                id="fullname"
+                label="Enter your fullname"
+                name="fullname"
+                autoComplete="fullname"
+                autoFocus
+              />
               <TextField
                 style= {stylingform}
                 margin="normal"
@@ -119,11 +116,17 @@ export default function SignIn() {
                 id="password"
                 autoComplete="current-password"
               />
-              <FormControlLabel
+              <TextField
                 style= {stylingform}
-                control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
-              /> 
+                margin="normal"
+                required
+                fullWidth
+                name="password2"
+                label="Confirm your password"
+                type="password"
+                id="password2"
+                autoComplete="current-password"
+              />
               <Button
                 className={styles.Signinbtn}
                 style = {btnstyling}
@@ -131,23 +134,32 @@ export default function SignIn() {
                 fullWidth
                 sx={{ mt: 3, mb: 2 }}
               >
-                Sign In
+                Sign Up
               </Button>
               <Grid container style= {stylingform}>
-                <Grid item xs>
-                  <Link href="#" variant="body2">
-                    Forgot password?
-                  </Link>
-                </Grid>
                 <Grid item>
-                  <Link href="/signup" variant="body2">
-                    {"Don't have an account? Sign Up"}
+                  <Link href="/signin" variant="body2">
+                    {"Already have an account? Sign In"}
                   </Link>
                 </Grid>
               </Grid>
             </Box>
           </Box>
         </Grid>
+        <Grid 
+          item
+          xs={false}
+          sm={4}
+          md={7}
+          sx={{
+            backgroundImage: `url(${bg.src})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundColor: (t) =>
+              t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        > </Grid>
       </Grid>
     </ThemeProvider>
   );

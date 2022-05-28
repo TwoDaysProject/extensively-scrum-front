@@ -16,3 +16,8 @@
     background-color: white !important;
     border: #00204A solid 1px;
 }
+.Signinbtn:hover {
+    background-color: #ED6400 !important;
+    font-size: 18px;
+    transition: 0.2s;
+}
