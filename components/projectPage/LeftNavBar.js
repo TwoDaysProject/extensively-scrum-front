@@ -6,7 +6,7 @@ import {
   } from "@fortawesome/free-solid-svg-icons";
 
 
-function LeftNavBar({setCurrentPage}) { 
+function LeftNavBar() { 
 
   return (
     <div className={styles.navcontainer}>
