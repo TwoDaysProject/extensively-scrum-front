@@ -1,7 +1,6 @@
 
 import Head from "next/head";
 import Navbar from "../components/navbar/Navbar";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useRouter } from "next/router";
 import LeftNavBar from "../components/projects/LeftNavBar";
 import Content from "../components/projects/Content";

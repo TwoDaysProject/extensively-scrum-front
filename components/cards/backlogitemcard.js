@@ -9,11 +9,11 @@ import {
 function Backlogitemcard(props) { 
 
   return (
-        <div className={styles.projecttab} onClick={() => location.href='#'} >
+        <div className={styles.projecttab} style={{ cursor: "auto" }}>
             <div className={styles.tableft}> 
                 <FontAwesomeIcon title={props.title}
 							    icon={props.icon}
-							    style={{ width: "25px", height: "35px", cursor: "pointer" ,
+							    style={{ width: "25px", height: "35px", cursor: "auto" ,
                                     color: "#ED6400", padding: "10px", paddingRight: "25px" }}
 			    />
                 <div> 

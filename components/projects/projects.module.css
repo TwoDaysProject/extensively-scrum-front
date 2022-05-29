@@ -110,3 +110,91 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
+.kanbanboard {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: sans-serif;
+  }
+  
+  .kanbanblock {
+    padding: 0.4rem;
+    width: 30.5%;
+    min-width: 14rem;
+    min-height: 4.5rem;
+    border-radius: 0.6rem;
+    background-color: white;
+  }
+  .task {
+    background-color: rgb(245,245,245);
+    margin: 0.2rem 0rem 0.3rem 0rem;
+    border-radius: 0.4rem;
+    padding: 0.5rem 0.3rem 0.5rem 0.3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  #taskbutton {
+    margin: 0.2rem 0rem 0.1rem 0rem;
+    background-color: white;
+    border-radius: 0.2rem;
+    width: 100%;
+    padding: 0.5rem 2.7rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    background-color: #00204A;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  #taskbutton:hover {
+      background-color: #ED6400;
+      font-size: 17px;
+      transition: .2s;
+  }
+  .title {
+    font-variant-caps: small-caps;
+    font-size: x-large;
+    padding-left: 35%;
+    color: #ED6400;
+}
+.modal {  
+    position: fixed; 
+    z-index: 1; /* Sit on top */
+    left: 40%;
+    top: 30%;
+    width: 30%; /* Full width */
+    height: 40%; /* Full height */
+    overflow: auto;
+    border-radius: 25px;
+    background-color: darkgray;
+}
+.modaltitle {
+    text-align: center;
+    padding: 20px;
+    font-size: xx-large;
+    font-weight: bold;
+    color: #00204A;
+}
+.btnmodal {
+    position: fixed;
+    top: 64%;
+    padding: 20px;
+    color: #fff;
+    font-size: large;
+    width: 15%;
+}
+#closebtnmodal {
+    background-color: red;
+    left: 55%;
+    border-radius: 0px 0px 25px 0px;
+}
+#savebtnmodal {
+    background-color: #00204A;
+    left: 40%;
+    border-radius: 0px 0px 0px 25px;
+}
